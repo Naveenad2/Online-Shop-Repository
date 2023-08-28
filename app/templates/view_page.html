@@ -1,0 +1,71 @@
+{% extends 'index.html'%}
+
+
+{% block bal %}
+<style>
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Adjust this value as needed */
+  }
+</style>
+<div class="container">
+    <div style="margin-block: 100px;"  class="row">
+    {% for data in pro_c %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow"  style="
+        box-shadow: 1px 1px 12px 0px;
+    ">
+          <img class="card-img-top" src="/{{data.photo}}" alt="Product Image">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+            <p class="card-text">{{data.product_name}}</p>
+            <p class="card-text">Price: ₹ {{data.price}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="/addtoCartPage/{{data.id}}" ><button type="button" class="btn btn-sm btn-outline-secondary">View products</button></a>
+              <h5></h5>
+            </div>
+          </div>
+        </div>
+      </div>{% extends 'index.html'%}
+
+
+{% block bal %}
+<style>
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Adjust this value as needed */
+  }
+</style>
+<div class="container">
+    <div style="margin-block: 100px;"  class="row">
+    {% for data in pro_c %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow"  style="
+        box-shadow: 1px 1px 12px 0px;
+    ">
+          <img class="card-img-top" src="/{{data.photo}}" alt="Product Image">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+            <p class="card-text">{{data.product_name}}</p>
+            <p class="card-text">Price: ₹ {{data.price}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="/addtoCartPage/{{data.id}}" ><button type="button" class="btn btn-sm btn-outline-secondary">View products</button></a>
+              <h5></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+
+    {% endblock bal %}
+</body>
+</html>
+
+    {% endfor %}
+
+
+    {% endblock bal %}
+</body>
+</html>

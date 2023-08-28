@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout Page</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="
+background: rgb(242, 218, 187);
+">
+<div class="container mt-5">
+  <div class="card shadow" style="
+  margin-block: 50px;
+" >
+    <div class="card-body">
+      <h5 class="card-title">Checkout</h5>
+
+      <!-- Checkout Form -->
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input value="{{user.username}}" type="text" class="form-control" id="name">
+          <input name="userid" value="{{user.id}}" type="text" class="form-control" id="name" style="visibility: hidden;">
+          <input name="cartid" value="{{cart.id}}" type="text" class="form-control" id="name" style="visibility: hidden;">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input name="email"  value="{{user.email}}" type="email" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea name="address" class="form-control" id="address" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="payment">Payment Method:</label>
+          <select class="form-control" id="payment">
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+            <option>PayPal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="totalAmount">Total Amount:</label>
+          <p class="font-weight-bold" id="totalAmount"> ₹{{cart.new_price}}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="totalAmount">Selected Item:</label>
+          <p class="font-weight-bold" id="totalAmount">{{cart.product.product_name}}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="selectedItems">Number of Selected Items:</label>
+          <p class="font-weight-bold" id="selectedItems">3</p>
+        </div>
+
+        <a href="/SuccessPage/{{cart.id}}"><button type="submit" class="btn btn-primary">Place Order</button></a>
+  
+      <!-- End of Checkout Form -->
+    </div>
+  </div>
+</div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'index.html'%}
+{% block bal %}
+<style>
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Adjust this value as needed */
+  }
+</style>
+
+<div class="container">
+  <div style="margin-block: 100px;" class="row">
+    {% for data in cat %}
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow " style="
+        box-shadow: 1px 1px 12px 0px;
+    ">
+          <span style="margin-block: -10px;
+            width: fit-content;
+            view-transition-name: auto;
+            margin-left: 313px;
+            font-size: medium;" class="badge bg-warning">{{data.tags}}</span>
+          <img class="card-img-top" src="/{{data.category_photo}}" alt="Product Image">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+            <p class="card-text">{{data.category_name}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="/view_cat/{{data.id}}"><button type="button" class="btn btn-warning">View products</button></a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock bal %}
